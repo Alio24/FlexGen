@@ -4,7 +4,8 @@ from omegaconf.dictconfig import DictConfig
 
 def recursively_cast_dictconfigs(cfg):
     if isinstance(cfg, DictConfig):
-        return {k2: recursively_cast_dictconfigs(v2) for k2, v2 in cfg.items()}
+        print k2: recursively_cast_dictconfigs(v2) for k2, v2 in cfg.items()
+    return recursively_cast_dictconfigs(cfg)
     else:
         return cfg
 
